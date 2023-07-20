@@ -1,13 +1,16 @@
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
-    "./node_modules/flowbite-react/**/*.js",
+    "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
+    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [require("flowbite/plugin")],
-  theme: {},
-};
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+});
