@@ -1,3 +1,5 @@
+import { RotatingSVGBell } from "@/styles/components/ui/Navbar.styles";
+
 export const LogoMarvel = () => {
   return (
     <svg
@@ -22,7 +24,7 @@ export const LogoMarvel = () => {
 
 export const BellNotification = () => {
   return (
-    <svg
+    <RotatingSVGBell
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="20"
@@ -43,7 +45,7 @@ export const BellNotification = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
+    </RotatingSVGBell>
   );
 };
 export const Settings = () => {
@@ -59,38 +61,7 @@ export const Settings = () => {
         d="M13.0744 4.4684C13.5746 5.18572 13.9265 6.01408 14.0859 6.90909H16V9.09091H14.0859C13.9265 9.98592 13.5746 10.8143 13.0744 11.5316L14.4282 12.8855L12.8855 14.4282L11.5316 13.0744C10.8143 13.5746 9.98592 13.9265 9.09091 14.0859V16H6.90909V14.0859C6.01408 13.9265 5.18572 13.5746 4.4684 13.0744L3.11454 14.4282L1.57176 12.8855L2.92562 11.5316C2.42545 10.8143 2.07349 9.98592 1.91413 9.09091H0V6.90909H1.91413C2.07349 6.01408 2.42545 5.18572 2.92562 4.4684L1.57176 3.11454L3.11454 1.57176L4.4684 2.92562C5.18572 2.42545 6.01408 2.07349 6.90909 1.91413V0H9.09091V1.91413C9.98592 2.07349 10.8143 2.42545 11.5316 2.92562L12.8855 1.57176L14.4282 3.11454L13.0744 4.4684Z"
         fill="#F0E6D2"
       />
-    </svg>
-  );
-};
-
-export const Selectormenu = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="39"
-      height="19"
-      viewBox="0 0 39 19"
-      fill="none"
-    >
-      <path
-        d="M32.0685 0.00444861H32.0731L30.7763 0H30.7717L22.8584 0.00444861L19.5023 2.98946L16.1416 0.00444861H8.22831L6.92694 0H6.93151L0 0.00444861L19.4977 19L39 0.00444861H32.0685ZM15.6119 1.33903L19.5068 4.80005L23.3881 1.33903H29.3881L19.4977 10.8902L9.61187 1.33903H15.6119ZM3.30594 1.33903H8.3105L19.4977 12.1402L30.6849 1.33903H35.6895L19.4977 17.1138L3.30594 1.33903Z"
-        fill="url(#paint0_linear_455_4860)"
-      />
-      <defs>
-        <linearGradient
-          id="paint0_linear_455_4860"
-          x1="19.5"
-          y1="0"
-          x2="19.5"
-          y2="19"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stop-color="#95753E" />
-          <stop offset="0.328125" stop-color="#C8A765" />
-          <stop offset="0.682292" stop-color="#D5B36D" />
-          <stop offset="1" stop-color="#9C7D42" />
-        </linearGradient>
-      </defs>
+      <circle cx="8" cy="8" r="3" fill="#010101" />
     </svg>
   );
 };
