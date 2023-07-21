@@ -1,7 +1,17 @@
-import Card from "@/components/Cards/Card";
+import CardList from "@/components/Cards/CardsList";
+import useMarvelCharacters from "@/hooks/useMarvelCharacters";
 
 const Personajes: React.FC = () => {
-  return <Card></Card>;
+  const { loading, error, characters } = useMarvelCharacters();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+  return <CardList cards={characters}></CardList>;
 };
 
 export default Personajes;
