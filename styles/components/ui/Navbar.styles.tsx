@@ -8,6 +8,7 @@ export const NavbarContainer = styled.nav`
   display: flex;
   align-items: center;
   height: 7.25rem;
+  border-bottom: 6px solid #3c3c41;
 `;
 
 export const ActiveNavLink = styled.div`

@@ -61,6 +61,7 @@ const NavbarApp: FC<NavbarProps> = () => {
         display: "flex",
         alignItems: "center",
         background: "black",
+        borderBottom: "1px solid #3C3C41",
       }}
     >
       <div className="container mx-auto flex items-center ">

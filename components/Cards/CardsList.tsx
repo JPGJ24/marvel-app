@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { CardsListProps } from "@/interfaces/props/CardsListProps";
 import CardHero from "./CardHero";
+import { LeftButton, RightButton } from "@/assets/cards/cards-svg";
 
 const CardList: FC<CardsListProps> = ({ cards }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -41,11 +42,11 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
 
       <div className="flex justify-center mt-4">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+          className=""
           disabled={currentPage === 1}
           onClick={handlePrevPage}
         >
-          Prev
+          <LeftButton />
         </button>
 
         {Array.from({ length: totalPages }, (_, index) => (
@@ -63,11 +64,11 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
         ))}
 
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2"
+          className=""
           disabled={currentPage === totalPages}
           onClick={handleNextPage}
         >
-          Next
+          <RightButton />
         </button>
       </div>
 
