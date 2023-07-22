@@ -4,7 +4,6 @@ import backgroundcardName from "@/assets/cards/background-name.png";
 
 export const CenteredContainerWrapper = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   .card {
     border: 1px solid #3c3c41;

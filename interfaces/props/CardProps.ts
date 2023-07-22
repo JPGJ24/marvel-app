@@ -3,4 +3,5 @@ export interface CardProps {
   imgURL: string;
   comics: number;
   movies: number;
+  handleOnClick: () => void;
 }
