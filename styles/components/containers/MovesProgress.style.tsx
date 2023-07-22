@@ -22,6 +22,10 @@ export const TextProgressProduction = styled.div`
   font-weight: 400;
   line-height: 100%;
   position: absolute;
+  @media only screen and (max-width: 511px) {
+    margin-left: 10rem;
+    margin-top: 1rem;
+  }
 `;
 export const TextProgressProduced = styled.div`
   color: #1da5b4;

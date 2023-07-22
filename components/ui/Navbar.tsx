@@ -9,7 +9,7 @@ import {
   IConSettings,
   NavbarContainer,
   Ul,
-} from "@/styles/components/ui/Navbar.styles";
+} from "@/styles/components/ui/navbar.styles";
 import {
   BellNotification,
   CloseMenuMobil,
@@ -56,10 +56,10 @@ const NavbarApp: FC<NavbarProps> = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className={router.pathname == "/personajes" ? "active" : "inactive"}
+        className={router.pathname == "/characters" ? "active" : "inactive"}
       >
         <ActiveNavLink className="flex items-center" onClick={handleCloseModal}>
-          <Link href="/personajes">PERSONAJES</Link>
+          <Link href="/characters">PERSONAJES</Link>
         </ActiveNavLink>
       </Typography>
     </Ul>
@@ -71,19 +71,15 @@ const NavbarApp: FC<NavbarProps> = () => {
         <div className="ml-20">
           <LogoMarvel />
         </div>
-
         <div className="hidden lg:block ml-20">{navList}</div>
-
         <div className="hidden lg:block mr-10 flex absolute right-0">
           <IConBell>
             <BellNotification />
           </IConBell>
-
           <IConSettings className="ml-5">
             <Settings />
           </IConSettings>
         </div>
-
         <IconButton
           variant="text"
           className="p-20 h-6 w-6 absolute right-0 text-inherit hover:bg-transparent

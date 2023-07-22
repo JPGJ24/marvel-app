@@ -2,11 +2,16 @@ import CardList from "@/components/cards/CardsList";
 import MarvelImage from "@/components/containers/MarvelImage";
 import MarvelVideo from "@/components/containers/MarvelVideo";
 import ProgressBar from "@/components/containers/MoviesProgress";
-import MovesProgress from "@/components/containers/MoviesProgress";
 import useMarvelCharacters from "@/hooks/useMarvelCharacters";
+import {
+  Container,
+  DivContainers,
+  DivProgress,
+  DivVideoImage,
+} from "@/styles/components/ui/characters.styles";
 import { Spinner } from "@material-tailwind/react";
 
-const Personajes: React.FC = () => {
+const HerosPage: React.FC = () => {
   const { loading, error, characters } = useMarvelCharacters();
 
   if (loading) {
@@ -16,27 +21,28 @@ const Personajes: React.FC = () => {
       </div>
     );
   }
-
   if (error) {
     return <div>Error: {error}</div>;
   }
   return (
-    <div className="px-14 mt-10">
-      <div className="flex gap-6 mb-6">
-        <div className="w-31.875">
+    <Container>
+      <DivContainers>
+        <DivProgress>
           <ProgressBar />
-        </div>
-        <div className=" w-23.875">
-          <MarvelVideo />
-        </div>
-        <div className=" w-23.875">
-          <MarvelImage />
-        </div>
-      </div>
+        </DivProgress>
+        <DivVideoImage>
+          <div className="div-video">
+            <MarvelVideo />
+          </div>
+          <div className="div-image">
+            <MarvelImage />
+          </div>
+        </DivVideoImage>
+      </DivContainers>
 
       <CardList cards={characters}></CardList>
-    </div>
+    </Container>
   );
 };
 
-export default Personajes;
+export default HerosPage;

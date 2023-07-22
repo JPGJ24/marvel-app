@@ -27,7 +27,7 @@ const ModalHero: FC<ModalHeroProps> = ({
         </button>
         <div
           className="flex flex-col sm:flex-row 
-        desktop: flex gap-4  bg-gray-900 p-10"
+        desktop: flex gap-4 bg-gray-900 p-10"
         >
           {hero !== null && (
             <CardHero

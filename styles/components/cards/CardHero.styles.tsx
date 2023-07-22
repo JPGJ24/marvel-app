@@ -16,6 +16,12 @@ export const CenteredContainerWrapper = styled.div`
       rgba(39, 44, 52, 0) 100%
     );
     position: relative;
+    @media only screen and (max-width: 414px) and (min-width: 400px) {
+      margin-left: 2rem;
+    }
+    @media only screen and (max-width: 390px) and (min-width: 375px) {
+      margin-left: 1rem;
+    }
     &::before {
       content: "";
       position: absolute;

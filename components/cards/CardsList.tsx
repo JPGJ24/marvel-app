@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { CardsListProps } from "@/interfaces/props/CardsListProps";
-import CardHero from "./CardHero";
-import { LeftButton, RightButton } from "@/assets/cards/cards-svg";
 import { Hero } from "@/interfaces/Hero";
+import CardHero from "./CardHero";
+import { LeftButton, RightButton } from "@/assets/cards/pagerCards-svg";
 import ModalHero from "./ModalHero";
 
 const CardList: FC<CardsListProps> = ({ cards }) => {

@@ -1,4 +1,4 @@
-import { RotatingSVGBell } from "@/styles/components/ui/Navbar.styles";
+import { RotatingSVGBell } from "@/styles/components/ui/navbar.styles";
 
 export const LogoMarvel = () => {
   return (

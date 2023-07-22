@@ -1,7 +1,8 @@
+import HomePage from "@/components/ui/HomePage";
 export default function Home() {
   return (
     <>
-      <h1>oe</h1>
+      <HomePage />
     </>
   );
 }

@@ -42,7 +42,10 @@ const ProgressBar = () => {
         <p>{goal} Películas</p>
         <p>Meta de Producción</p>
       </TextProgressProduction>
-      <div className="mb-14 relative w-96 h-8 rounded-lg overflow-hidden">
+      <div
+        className="div-container-progress mb-14 relative 
+      w-96 h-8 rounded-lg overflow-hidden"
+      >
         <Image
           className="rounded-lg bg-gray-700 w-full h-full"
           src={VectorBarWhite}
@@ -51,7 +54,7 @@ const ProgressBar = () => {
         />
         <Image
           src={Bar}
-          className="absolute top-0 left-0 h-6 mt-1 pl-1 bg-gradient-to-r "
+          className="bar-blue absolute top-0 left-0 h-6 mt-1 pl-1 bg-gradient-to-r "
           style={{ width: `${progress}%` }}
           alt={"bar"}
         />
@@ -72,5 +75,4 @@ const ProgressBar = () => {
     </div>
   );
 };
-
 export default ProgressBar;
