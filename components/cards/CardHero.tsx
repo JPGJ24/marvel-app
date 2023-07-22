@@ -10,10 +10,19 @@ import { CenteredContainerWrapper } from "@/styles/components/cards/CardHero.sty
 import BackgroundImgHero from "@/assets/cards/background-img-hero.png";
 import Image from "next/image";
 
-const CardHero: FC<CardProps> = ({ name, imgURL, comics, movies }) => {
+const CardHero: FC<CardProps> = ({
+  name,
+  imgURL,
+  comics,
+  movies,
+  handleOnClick,
+}) => {
+  const handleClick = () => {
+    handleOnClick();
+  };
   return (
-    <CenteredContainerWrapper>
-      <Card className="card h-96 w-60 bg-cover bg-center">
+    <CenteredContainerWrapper onClick={handleClick}>
+      <Card className="card  h-96 w-60 bg-cover bg-center">
         <CardBody>
           <div className="div-text">
             <h1 className="text-name mb-1 ">{name}</h1>
