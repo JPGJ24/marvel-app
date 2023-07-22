@@ -2,8 +2,13 @@ import { FC, useState } from "react";
 import { CardsListProps } from "@/interfaces/props/CardsListProps";
 import CardHero from "./CardHero";
 import { LeftButton, RightButton } from "@/assets/cards/cards-svg";
+import { Hero } from "@/interfaces/Hero";
+import ModalHero from "./ModalHero";
 
 const CardList: FC<CardsListProps> = ({ cards }) => {
+  const [selectedHero, setSelectedHero] = useState<Hero | null>(null);
+  const [open, setOpen] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 5;
   const totalPages = Math.ceil(cards.length / cardsPerPage);
@@ -24,20 +29,28 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
     setCurrentPage(page);
   };
 
+  const handleCardClick = (hero: Hero) => {
+    setSelectedHero(hero);
+    setOpen(true);
+  };
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   return (
     <div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        {currentCards.map(
-          ({ id, name, urlImg, comicsAvailable, seriesAvailable }) => (
-            <CardHero
-              key={id}
-              name={name}
-              imgURL={urlImg}
-              comics={comicsAvailable}
-              movies={seriesAvailable}
-            />
-          )
-        )}
+        {currentCards.map((hero) => (
+          <CardHero
+            key={hero.id}
+            name={hero.name}
+            imgURL={hero.urlImg}
+            comics={hero.comicsAvailable}
+            movies={hero.seriesAvailable}
+            handleOnClick={() => handleCardClick(hero)}
+          />
+        ))}
       </div>
 
       <div className="flex justify-center mt-4">
@@ -77,6 +90,12 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
           Page {currentPage} / {totalPages}
         </p>
       </div>
+
+      <ModalHero
+        hero={selectedHero}
+        open={open}
+        handleOpen={handleOpen}
+      ></ModalHero>
     </div>
   );
 };

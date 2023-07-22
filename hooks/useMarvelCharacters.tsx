@@ -33,6 +33,7 @@ const useMarvelCharacters = () => {
           const parsedCharacters = charactersData.map((characterData: any) => {
             const seriesList =
               characterData.series?.items?.map((item: Hero) => item.name) || [];
+            console.log(seriesList);
             return {
               id: characterData.id,
               name: characterData.name,
