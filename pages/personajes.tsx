@@ -3,12 +3,17 @@ import MarvelImage from "@/components/containers/MarvelImage";
 import MarvelVideo from "@/components/containers/MarvelVideo";
 import MovesProgress from "@/components/containers/MovesProgress";
 import useMarvelCharacters from "@/hooks/useMarvelCharacters";
+import { Spinner } from "@material-tailwind/react";
 
 const Personajes: React.FC = () => {
   const { loading, error, characters } = useMarvelCharacters();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex gap-8flex flex-col items-center justify-center h-96">
+        <Spinner className="h-12 w-12" color="amber" />
+      </div>
+    );
   }
 
   if (error) {
