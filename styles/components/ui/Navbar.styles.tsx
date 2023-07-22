@@ -8,7 +8,7 @@ export const NavbarContainer = styled.nav`
   display: flex;
   align-items: center;
   height: 7.25rem;
-  border-bottom: 6px solid #3c3c41;
+  border-bottom: 1px solid #3c3c41;
 `;
 
 export const ActiveNavLink = styled.div`
@@ -41,7 +41,9 @@ export const Ul = styled.ul`
     align-items: center;
     justify-content: center;
     position: relative;
-
+    @media only screen and (max-width: 959px) {
+      background: linear-gradient(65deg, #231f20 0%, rgba(34, 34, 34, 0) 100%);
+    }
     &::before {
       content: "";
       position: absolute;

@@ -22,7 +22,7 @@ const CardHero: FC<CardProps> = ({
   };
   return (
     <CenteredContainerWrapper onClick={handleClick}>
-      <Card className="card  h-96 w-60 bg-cover bg-center">
+      <Card className="card h-96 w-60 bg-cover bg-center cursor-pointer">
         <CardBody>
           <div className="div-text">
             <h1 className="text-name mb-1 ">{name}</h1>

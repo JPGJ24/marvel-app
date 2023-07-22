@@ -12,9 +12,20 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: { min: "641px", max: "1024px" },
+
+        laptop: { min: "1023px", max: "1535px" },
+
+        desktop: { min: "1536px" },
+      },
+      fontFamily: {
+        LOL: ["Beaufort for LOL"],
+      },
       colors: {
         c89b3c: "#c89b3c",
         ffae00: "#ffae00",
+        F0E6D2: "#F0E6D2",
       },
       spacing: {
         2.38: "2.38rem",

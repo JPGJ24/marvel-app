@@ -37,6 +37,9 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
   const handleOpen = () => {
     setOpen(!open);
   };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -95,6 +98,7 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
         hero={selectedHero}
         open={open}
         handleOpen={handleOpen}
+        handleClose={handleClose}
       ></ModalHero>
     </div>
   );

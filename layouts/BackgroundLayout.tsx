@@ -10,7 +10,7 @@ const BackgroundLayout: React.FC<BackgroundLayoutProps> = ({ children }) => {
         src={ImgBackground}
         alt="Background Marvel App"
         layout="fill"
-        objectFit="cover"
+        object-fit="cover"
       />
       <div className="relative z-10">{children}</div>
     </div>
