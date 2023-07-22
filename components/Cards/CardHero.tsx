@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { CardProps } from "@/interfaces/props/CardProps";
-import { CenteredContainerWrapper } from "@/styles/components/Cards/CardHero.styles";
+import { CenteredContainerWrapper } from "@/styles/components/cards/CardHero.styles";
 import BackgroundImgHero from "@/assets/cards/background-img-hero.png";
 import Image from "next/image";
 

@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import ImgBackground from "@/assets/ui/Background-marvelApp.png"; // Asegúrate de proporcionar la ruta correcta de la imagen
-import { BackgroundMarvelAppProps } from "@/interfaces/props/BackgroundMarvelApp";
+import { BackgroundLayoutProps } from "@/interfaces/props/BackgroundLayoutProps";
 
-const BackgroundMarvelApp: React.FC<BackgroundMarvelAppProps> = ({
-  children,
-}) => {
+const BackgroundLayout: React.FC<BackgroundLayoutProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen bg-scroll">
       <Image
@@ -19,4 +17,4 @@ const BackgroundMarvelApp: React.FC<BackgroundMarvelAppProps> = ({
   );
 };
 
-export default BackgroundMarvelApp;
+export default BackgroundLayout;

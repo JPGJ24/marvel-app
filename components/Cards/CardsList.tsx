@@ -42,7 +42,7 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
 
       <div className="flex justify-center mt-4">
         <button
-          className=""
+          className="hover:bg-gray-700 rounded-full"
           disabled={currentPage === 1}
           onClick={handlePrevPage}
         >
@@ -54,9 +54,9 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
             key={index + 1}
             className={`${
               currentPage === index + 1
-                ? "bg-blue-700"
-                : "bg-blue-500 hover:bg-blue-700"
-            } text-white font-bold py-2 px-4 rounded mx-1`}
+                ? "bg-ffae00"
+                : "bg-c89b3c hover:bg-ffae00"
+            } text-black font-bold rounded-full mx-1 w-8 h-8`}
             onClick={() => handlePageChange(index + 1)}
           >
             {index + 1}
@@ -64,7 +64,7 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
         ))}
 
         <button
-          className=""
+          className="hover:bg-gray-700 rounded-full"
           disabled={currentPage === totalPages}
           onClick={handleNextPage}
         >
@@ -72,9 +72,9 @@ const CardList: FC<CardsListProps> = ({ cards }) => {
         </button>
       </div>
 
-      <div className="flex justify-center mt-2">
-        <p className="text-gray-500">
-          Page {currentPage} of {totalPages}
+      <div className="flex justify-center mt-2 ">
+        <p className="text-gray-500 mb-9">
+          Page {currentPage} / {totalPages}
         </p>
       </div>
     </div>

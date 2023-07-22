@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
 
-export interface BackgroundMarvelAppProps {
+export interface BackgroundLayoutProps {
   children: ReactNode;
 }

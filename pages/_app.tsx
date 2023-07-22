@@ -2,16 +2,16 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import type { AppProps } from "next/app";
 import RootLayout from "@/layouts/layout";
-import BackgroundMarvelApp from "@/components/ui/Background-marvelApp";
+import BackgroundLayout from "@/layouts/BackgroundLayout";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider>
-        <BackgroundMarvelApp>
+        <BackgroundLayout>
           <RootLayout />
           <Component {...pageProps} />
-        </BackgroundMarvelApp>
+        </BackgroundLayout>
       </ThemeProvider>
     </>
   );
