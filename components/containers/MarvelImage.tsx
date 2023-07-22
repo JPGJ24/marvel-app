@@ -1,10 +1,13 @@
-import React from "react";
-
 const MarvelImage = () => {
   return (
-    <div className=" h-12.022 bg-ffae00">
-      <div>Imagen</div>
-    </div>
+    <>
+      <img
+        className="rounded-lg h-12.022 w-full"
+        src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/07/marvels-avengers-2750719.jpg?tf=1200x"
+        alt="Marvel-team"
+        style={{ border: "1px solid #42331A" }}
+      />
+    </>
   );
 };
 

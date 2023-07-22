@@ -7,6 +7,8 @@ export const CenteredContainerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   .card {
+    border: 1px solid #3c3c41;
+    border-radius: 0.5125rem;
     background: linear-gradient(
       360deg,
       #000 0%,

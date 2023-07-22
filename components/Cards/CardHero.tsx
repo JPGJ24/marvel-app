@@ -13,7 +13,7 @@ import Image from "next/image";
 const CardHero: FC<CardProps> = ({ name, imgURL, comics, movies }) => {
   return (
     <CenteredContainerWrapper>
-      <Card className="card  h-96 w-60 bg-cover bg-center">
+      <Card className="card h-96 w-60 bg-cover bg-center">
         <CardBody>
           <div className="div-text">
             <h1 className="text-name mb-1 ">{name}</h1>
