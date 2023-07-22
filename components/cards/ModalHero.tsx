@@ -9,7 +9,6 @@ const ModalHero: FC<ModalHeroProps> = ({
   handleOpen,
   handleClose,
 }) => {
-  console.log(handleClose);
   return (
     <>
       <Dialog
