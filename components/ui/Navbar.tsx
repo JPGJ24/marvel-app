@@ -9,7 +9,7 @@ import {
   IConSettings,
   NavbarContainer,
   Ul,
-} from "@/styles/components/ui/navbar.styles";
+} from "@/styles/components/ui/Navbar.styles";
 import {
   BellNotification,
   CloseMenuMobil,
