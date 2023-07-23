@@ -5,6 +5,7 @@ import backgroundcardName from "@/assets/cards/background-name.png";
 export const CenteredContainerWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   .card {
     border: 1px solid #3c3c41;
     border-radius: 0.5125rem;
